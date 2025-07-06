@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+</head>
+<body>
+    <h1> JavaScript Siblings</h1>
+
+    <ul id="menu">
+        <li>Home</li>
+        <li>Products</li>
+        <li>Customer Support</li>
+        <li>Careers</li>
+        <li class="current">Investors</li>
+        <li>News</li>
+        <li>About Us</li>
+    </ul>
+    <script>
+        // let current = document.querySelector('.current');
+        // console.log(current)
+
+        // let nextSibling = current.nextElementSibling;
+        // console.log(nextSibling)
+
+        // let preSibling = current.previousElementSibling;
+        // console.log(preSibling)
+
+        // while(nextSibling){
+        //     console.log(nextSibling)
+        //     nextSibling = nextSibling.nextElementSibling;
+        // }
+
+        let getSiblings = function(e){
+            let Siblings = [];
+            if(!e.parentNode) return Siblings;
+
+            let sibling = e.parentNode.firstChild;
+            while(sibling){
+                if(sibling.nodeType === 1 && sibling !== e){
+                    Siblings.push(sibling);
+                }
+                sibling = sibling.nextSibling;
+            }
+            return Siblings;
+        }
+
+        let siblings = getSiblings(document.querySelector('.current'));
+        // console.log(siblings)
+        let siblingText = siblings.map(e=>e.innerHTML)
+        console.log(siblingText)
+
+
+    </script>
+</body>
+</html>

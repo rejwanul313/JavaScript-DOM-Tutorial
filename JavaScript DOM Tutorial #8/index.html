@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+</head>
+<body>
+    <h1> JavaScript Child Elements</h1>
+
+    <ul id="menu">
+        <li class="first">Home</li>
+        <li>Products</li>
+        <li>Customer Support</li>
+        <li>Careers</li>
+        <li class="current">Investors</li>
+        <li>News</li>
+        <li class="last">About Us</li>
+    </ul>
+    <script>
+       
+        let content = document.getElementById('menu');
+        // console.log(content)
+        let firstChild = content.firstElementChild;
+        console.log(firstChild)
+
+        let lastchild = content.lastElementChild
+        console.log(lastchild)
+
+        let children = content.children;
+        console.log(children)
+
+
+    </script>
+</body>
+</html>

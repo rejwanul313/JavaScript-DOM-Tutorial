@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+</head>
+<body>
+    <h1> JavaScript getElementsByTagName()</h1>
+    <!-- <h1> JavaScript getElementsByTagName()</h1> -->
+     <h2>First Heading</h2>
+     <p>This is a first paragraph.</p>
+     <h2>second Heading</h2>
+     <p>This is a Second paragraph.</p>
+     <h2>Third Heading</h2>
+     <p>This is a Third paragraph.</p>
+     <h2>Four Heading</h2>
+     <p>This is a four paragraph.</p>
+
+
+     <button id="h2Count">Count h2</button>
+    <script>
+    <!-- syntax: -->
+        // const element = document.getElementsByTagName('h1');
+
+        // const items =Array.of(...element);
+        // console.log(items)
+
+
+        let btn = document.getElementById('h2Count');
+        console.log(btn)
+        btn.addEventListener('click', () => {
+            let headings = document.getElementsByTagName('h2');
+            console.log(headings.length);
+            alert(`The number of H2 Tags: ${headings.length}`);
+        })
+
+    </script>
+</body>
+</html>

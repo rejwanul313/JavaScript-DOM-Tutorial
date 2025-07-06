@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+</head>
+<body>
+    <h1> JavaScript getElementsByClassName()</h1>
+
+    <!-- <ul id="menu">
+        <li class="item">HTML</li>
+        <li class="item">CSS</li>
+        <li class="item heightLight">JavaScript</li>
+        <li class="item">TypeScript</li>
+    </ul> -->
+
+
+    <h2 class="secondary">Example 1</h2>
+    <h2 class="secondary">Example 2</h2>
+    <script>
+    <!-- syntax: -->
+        // getElementsByClassName(names)
+
+        // let menu = document.getElementById('menu');
+        // let items = menu.getElementsByClassName('item');
+        // console.log(items);
+
+        // let data = [].map.call(items, (item)=> item.textContent);
+        // console.log(data)
+
+        const exmpleItems = document.getElementsByClassName('secondary');
+        console.log(exmpleItems)
+        const data = Array.of(...exmpleItems).map((item)=>item.textContent);
+        console.log(data)
+
+
+    </script>
+</body>
+</html>
