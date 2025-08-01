@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+</head>
+
+<body>
+    <h1> JavaScript appendChild() Method</h1>
+
+
+    <!-- <ul id="menu">
+        
+    </ul> -->
+
+    <ul id="first_list">
+        <li>Task#1</li>
+        <li>Task#2</li>
+        <li>Task#3</li>
+    </ul>
+
+    <h1>second list </h1>
+
+    <ul id="second_list">
+        <li>Rahim</li>
+        <li>Karim</li>
+    </ul>
+
+    <script>
+        // parentNode.appendChild(childNode)
+        // function createMenuItem(name){
+        //     let li = document.createElement('li');
+        //     li.textContent = name;
+        //     return li;
+        // }
+
+        // const menu = document.querySelector('#menu');
+        // menu.appendChild(createMenuItem('Home'));
+        // menu.appendChild(createMenuItem('About'))
+        // menu.appendChild(createMenuItem('Contact Us'))
+
+        const firstList = document.querySelector('#first_list');
+        const task1 = firstList.firstElementChild;
+        console.log(task1)
+
+        const secondList = document.querySelector('#second_list');
+        secondList.appendChild(task1);
+
+
+    </script>
+</body>
+
+</html>

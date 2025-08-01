@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+</head>
+
+<body>
+    <h1> JavaScript DocumentFragment </h1>
+
+    <ul id="language"></ul>
+   
+    <script>
+    
+        let languages = ['JavaScript', 'TypeScript', 'Java', 'Python']
+        let langE1 = document.querySelector('#language');
+        let fragment = new DocumentFragment();
+
+        languages.forEach((language) => {
+            let li = document.createElement('li');
+            li.innerHTML = language
+            fragment.appendChild(li);
+        })
+        langE1.appendChild(fragment);
+    </script>
+</body>
+
+</html>

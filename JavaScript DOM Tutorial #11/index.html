@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+</head>
+
+<body>
+    <h1> JavaScript textContent</h1>
+
+    <div id="note">
+        JavaScript textContent read!
+        <span style="display: none;">Hidden text</span>
+    </div>
+    <script>
+    //    let text = node.textContent;
+    let note = document.getElementById('note');
+    note.textContent = 'This is a note'
+    console.log(note.textContent)
+    console.log(note.innerHTML)
+
+    </script>
+</body>
+
+</html>

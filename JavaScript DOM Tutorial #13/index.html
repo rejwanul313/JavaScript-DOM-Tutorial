@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+</head>
+
+<body>
+    <h1> JavaScript innerHTML vs createElement() </h1>
+
+
+    <div class="container"></div>
+   
+    <script>
+    //    let div = document.querySelector('.container');
+    //    let p = document.createElement('p');
+    //    p.textContent = 'JavaScript DOM Tutorial';
+    //    div.appendChild(p)
+
+    // let innerDiv = document.querySelector('.container');
+    // innerDiv.innerHTML = '<p>InnHTML Js DOM'
+
+        let documentFragmentDiv= document.querySelector('.container');
+        // for(let i= 0;i<1000; i++){
+        //     let p = document.createElement('p');
+        //     p.textContent = `Paragraph ${i}`;
+        //     documentFragmentDiv.appendChild(p);
+        // }
+
+
+        let fragment = document.createDocumentFragment();
+        for(let i = 0; i< 1000; i++){
+            let p = document.createElement('p');
+            p.textContent = `Paragraph ${i}`;
+            fragment.appendChild(p);
+        }
+
+
+        documentFragmentDiv.appendChild(fragment)
+
+    </script>
+</body>
+
+</html>
